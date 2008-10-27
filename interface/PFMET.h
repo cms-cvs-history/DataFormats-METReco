@@ -17,7 +17,7 @@ namespace reco
     PFMET() {}
     PFMET( SpecificPFMETData calo_data_, double sumet_,
 	     const LorentzVector& fP4, const Point& fVertex )
-      : MET( sumet_, fP4, fVertex ), pf_data( pf_data_ ) {}
+      : MET( sumet_, fP4, fVertex ), pf_data( pf_data ) {}
 
     virtual ~PFMET() {}
     
