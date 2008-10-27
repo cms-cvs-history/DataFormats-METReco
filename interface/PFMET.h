@@ -9,13 +9,16 @@ date: 10/27/08
 */
 
 #include "DataFormats/METReco/interface/MET.h"
-#include "DataFormats/METReco/interface/CorrMetData.h"
-
+#include "DataFormats/METReco/interface/SpecificPFMETData.h"
 namespace reco
 {
   class PFMET:  public MET {
   public:
     PFMET() {}
+    PFMET( SpecificPFMETData calo_data_, double sumet_,
+	     const LorentzVector& fP4, const Point& fVertex )
+      : MET( sumet_, fP4, fVertex ), pf_data( pf_data_ ) {}
+
     virtual ~PFMET() {}
     
     //getters
