@@ -18,6 +18,6 @@ struct SpecificPFMETData
   double NeutralHadFraction ;
   double ChargedEMFraction ; 
   double ChargedHadFraction ;
-
+  double MuonFraction ;
 }; //public : struct SpecificPFMETData
 #endif
