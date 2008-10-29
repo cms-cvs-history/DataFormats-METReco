@@ -4,7 +4,7 @@
 /*
 class: PFMET
 description:  MET made from Particle Flow candidates
-author: R. Cavanaugh
+authors: R. Remington (UF), R. Cavanaugh (UIC/Fermilab)
 date: 10/27/08
 */
 
@@ -15,9 +15,9 @@ namespace reco
   class PFMET:  public MET {
   public:
     PFMET() {}
-    PFMET( SpecificPFMETData calo_data_, double sumet_,
+    PFMET( SpecificPFMETData pf_data_, double sumet_,
 	     const LorentzVector& fP4, const Point& fVertex )
-      : MET( sumet_, fP4, fVertex ), pf_data( pf_data ) {}
+      : MET( sumet_, fP4, fVertex ), pf_data( pf_data_ ) {}
 
     virtual ~PFMET() {}
     
@@ -26,8 +26,8 @@ namespace reco
     double NeutralHadFraction() const { return pf_data.NeutralHadFraction; }
     double ChargedEMFraction() const { return pf_data.ChargedEMFraction; }
     double ChargedHadFraction() const { return pf_data.ChargedHadFraction; }
+    double MuonFraction() const { return pf_data.MuonFraction; }
     
-
     // block accessors
     SpecificPFMETData getSpecific() const {return pf_data;}
    
