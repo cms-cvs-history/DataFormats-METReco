@@ -72,6 +72,8 @@ namespace reco
       /* Returns the event MET-phi in HF- */
       double CaloMETPhiInmHF() const {return calo_data.CaloMETPhiInmHF;};
     
+     //Set Met Significance                                                                                                          
+      void SetMetSignificance(double metsig){ calo_data.METSignificance = metsig; }
       
       // block accessors
       SpecificCaloMETData getSpecific() const {return calo_data;}
