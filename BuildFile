@@ -4,6 +4,9 @@
 <use name=DataFormats/Common>
 <use name=DataFormats/Math>
 <use name=DataFormats/RecoCandidate>
+<use name=L1Trigger/CSCTrackFinder>
+<use name=L1Trigger/CSCCommonTrigger>
+<use name=L1Trigger/CSCTriggerPrimitives>	
 <use name=FWCore/Utilities>
 <use name=boost>
 <use name=root>
@@ -15,6 +18,9 @@
   <use name=DataFormats/Common>
   <use name=DataFormats/Math>
   <use name=DataFormats/RecoCandidate>
+  <use name=L1Trigger/CSCTrackFinder>
+  <use name=L1Trigger/CSCCommonTrigger>
+  <use name=L1Trigger/CSCTriggerPrimitives>
   <use name=FWCore/Utilities>
   <lib name=DataFormatsMETReco>
 </export>
