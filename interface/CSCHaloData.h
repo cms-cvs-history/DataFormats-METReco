@@ -40,13 +40,17 @@ namespace reco {
     // Number of Halo Tracks in +/-  endcap
     int NumberOfHaloTracks(int z=0) const ;
 
+    bool CSCHaloHLTAccept() const {return HLTAccept;}
+
     // Get Reference to the Tracks
     edm::RefVector<reco::TrackCollection>& GetTracks(){return TheTrackRefs;}
     const edm::RefVector<reco::TrackCollection>& GetTracks() const {return TheTrackRefs;}
     
-    // Set Number of Halo Triggers
+    // Set Number of L1 Halo Triggers
     void SetNumberOfHaloTriggers(int PlusZ,  int MinusZ ){ nTriggers_PlusZ =PlusZ; nTriggers_MinusZ = MinusZ ;}
 
+    // Set HLT Bit
+    void SetHLTBit(bool status) { HLTAccept = status ;} 
     // Get GlobalPoints of CSC tracking rechits nearest to the calorimeters
     const std::vector<GlobalPoint>& GetCSCTrackImpactPositions() const {return TheGlobalPositions;}
     std::vector<GlobalPoint>& GetCSCTrackImpactPositions() {return TheGlobalPositions;}
@@ -61,8 +65,8 @@ namespace reco {
     int nTriggers_PlusZ;
     int nTriggers_MinusZ;
  
-    // Number of CSC halotriggers reported by the HLT
-    int nTriggers_HLT;
+    // CSC halo trigger reported by the HLT
+    bool HLTAccept;
       
     // Number of CSC stand-alone tracks built by cosmic reco in each endcap
     int nTracks_PlusZ;
