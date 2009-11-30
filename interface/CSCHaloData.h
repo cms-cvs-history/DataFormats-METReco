@@ -48,7 +48,6 @@ namespace reco {
     void SetNumberOfHaloTriggers(int PlusZ,  int MinusZ ){ nTriggers_PlusZ =PlusZ; nTriggers_MinusZ = MinusZ ;}
 
     // Get GlobalPoints of CSC tracking rechits nearest to the calorimeters
-    //std::vector<const GlobalPoint>& GetCSCTrackImpactPositions() const {return TheGlobalPositions;}
     const std::vector<GlobalPoint>& GetCSCTrackImpactPositions() const {return TheGlobalPositions;}
     std::vector<GlobalPoint>& GetCSCTrackImpactPositions() {return TheGlobalPositions;}
     
@@ -57,9 +56,15 @@ namespace reco {
 
     // The GlobalPoints from constituent rechits nearest to the calorimeter of CSC tracks
     std::vector<GlobalPoint> TheGlobalPositions;
+
+    // Number of L1 CSC halo triggers in each endcap
     int nTriggers_PlusZ;
     int nTriggers_MinusZ;
-    
+ 
+    // Number of CSC halotriggers reported by the HLT
+    int nTriggers_HLT;
+      
+    // Number of CSC stand-alone tracks built by cosmic reco in each endcap
     int nTracks_PlusZ;
     int nTracks_MinusZ;
   };
