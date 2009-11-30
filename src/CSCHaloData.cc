@@ -50,6 +50,7 @@ CSCHaloData::CSCHaloData()
 {
   nTriggers_PlusZ = 0;
   nTriggers_MinusZ = 0 ;
+  nTriggers_HLT = 0 ;
   nTracks_PlusZ = 0 ;
   nTracks_MinusZ = 0;
 }
@@ -60,7 +61,7 @@ int CSCHaloData::NumberOfHaloTriggers(int z) const
   else if( z == -1 )
     return nTriggers_MinusZ;
   else 
-    return nTriggers_MinusZ + nTriggers_PlusZ;
+    return nTriggers_HLT;
 }
 
 int CSCHaloData::NumberOfHaloTracks(int z) const 
