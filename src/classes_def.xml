@@ -21,12 +21,6 @@
   <class name="std::vector<metsig::SigInputObj>"/> 
   <class name="edm::Wrapper<std::vector<metsig::SigInputObj> >"/> 
 
-  <class name="reco::JetInfo" ClassVersion="10">
-   <version ClassVersion="10" checksum="1396416553"/>
-  </class>
-  <class name="reco::JetInfoCollection" />
-  <class name="edm::Wrapper<reco::JetInfoCollection>" />
-
   <class name="reco::MVAMEtJetInfo" ClassVersion="12">
    <version ClassVersion="10" checksum="695030979"/>
    <version ClassVersion="11" checksum="2096949665"/>
