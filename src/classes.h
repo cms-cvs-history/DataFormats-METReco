@@ -1,3 +1,4 @@
+// $Id: CorrMETData.h,v 1.5 2012/09/10 18:21:56 sakuma Exp $
 #include "DataFormats/METReco/interface/MET.h"
 #include "Math/Cartesian3D.h" 
 #include "Math/Polar3D.h" 
@@ -32,8 +33,6 @@
 #include "DataFormats/METReco/interface/BeamHaloSummary.h"
 #include "DataFormats/METReco/interface/CorrMETData.h"
 #include "DataFormats/METReco/interface/SigInputObj.h"
-#include "DataFormats/METReco/interface/MVAMETData.h"
-#include "DataFormats/METReco/interface/MVAMETDataFwd.h"
 #include "DataFormats/METReco/interface/MVAMEtData.h"
 #include "DataFormats/METReco/interface/MVAMEtDataFwd.h"
 #include "DataFormats/METReco/interface/AnomalousECALVariables.h"
@@ -157,10 +156,6 @@ namespace {
     edm::Wrapper<metsig::SigInputObj> dummy62;
     std::vector<metsig::SigInputObj> dummy63;
     edm::Wrapper<std::vector<metsig::SigInputObj> > dummy64;
-
-    reco::JetInfo dummyJetInfo;
-    reco::JetInfoCollection dummyJetInfoCollection;
-    edm::Wrapper<reco::JetInfoCollection> dummyJetInfoCollectionWrapped;
 
     reco::MVAMEtJetInfo dummyMVAMEtJetInfo;
     reco::MVAMEtJetInfoCollection dummyMVAMEtJetInfoCollection;
